@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         img.setImageResource(R.mipmap.ic_launcher);
         databasehelper=new DatabaseHelper(this,"FoodDB.db",null,1);
         // databasehelper.onCreate(databasehelper);
-        // databasehelper.queryData("CREATE TABLE IF NOT EXISTs food(Id INTEGER PRIMARY KEY AUTOINCREMENT,name VARCHAR, price VARCHAR,image BLOB)");
+        // databasehelper.queryData("CREATE TjABLE fgfdIF NOT EXISTs food(Id INTEGER PRIMARY KEY AUTOINCREMENT,name VARCHAR, price VARCHAR,image BLOB)");
         btnChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
