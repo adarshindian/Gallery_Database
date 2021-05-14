@@ -24,11 +24,7 @@
        android:background="@color/cardview_light_background"
 
 />
-    <Button
-        android:id="@+id/btnchoose"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Choose Pick"/>
+
     <Button
         android:id="@+id/btnadd"
         android:layout_width="match_parent"
@@ -38,7 +34,7 @@
         android:id="@+id/btnList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choose Pick"/>
+        android:text="List Images"/>
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"

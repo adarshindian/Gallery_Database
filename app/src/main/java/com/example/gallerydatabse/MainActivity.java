@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         databasehelper=new DatabaseHelper(this,"FoodDB.db",null,1);
         // databasehelper.onCreate(databasehelper);
         // databasehelper.queryData("CREATE TjABLE fgfdIF NOT EXISTs food(Id INTEGER PRIMARY KEY AUTOINCREMENT,name VARCHAR, price VARCHAR,image BLOB)");
-        btnChoose.setOnClickListener(new View.OnClickListener() {
+        img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 st=true;
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
     {
         et1=findViewById(R.id.textfirst);
         et2=findViewById(R.id.textsecond);
-        btnChoose=findViewById(R.id.btnchoose);
+       // btnChoose=findViewById(R.id.btnchoose);
         btnAdd=findViewById(R.id.btnadd);
         btnList=findViewById(R.id.btnList);
         img=findViewById(R.id.img);
