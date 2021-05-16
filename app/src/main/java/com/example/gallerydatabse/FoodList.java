@@ -3,6 +3,7 @@ package com.example.gallerydatabse;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -37,13 +38,19 @@ public class FoodList extends AppCompatActivity {
 
 
     public void showDialogue(int position){
-        Dialog dialogue=new Dialog(this);
+        Dialog dialogue=new Dialog(FoodList.this);
         dialogue.setContentView(R.layout.samplemyview);
         //Getting custom Dialogue Views
         TextView text_inside=dialogue.findViewById(R.id.text_of_Image);
         ImageView img_inside=dialogue.findViewById(R.id.image);
+       // int img=show[position];
 
         Button cancel=dialogue.findViewById(R.id.Cancel);
+        Cursor c = MainActivity.databasehelper.getData("SELECT id FROM FOOD");
+        ArrayList<Integer> arrID = new ArrayList<Integer>();
+        while (c.moveToNext()){
+            arrID.add(c.getInt(0));
+        }
 //        String trim = text_inside.get(position).toString().trim();
 //        text_inside.setText(String.valueOf(trim));
         // Integer c=imageids.get(position);
@@ -51,7 +58,7 @@ public class FoodList extends AppCompatActivity {
 
        // String title=getResources().getResourceName();
        // text_inside.setText(title.substring(title.indexOf("/")+1));
-      //  img_inside.setImageResource(ByteBuffer.wrap(show.get(position).getImage()).getInt());
+        img_inside.setImageResource(ByteBuffer.wrap(show.get(position).getImage()).getInt());
         dialogue.show();
         // Toast.makeText(this,"Hello",Toast.LENGTH_SHORT).show();
 
